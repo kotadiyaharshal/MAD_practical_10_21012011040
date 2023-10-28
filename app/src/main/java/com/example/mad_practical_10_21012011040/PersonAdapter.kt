@@ -15,11 +15,11 @@ class PersonAdapter( context: Context,val personArray:ArrayList<Person>):ArrayAd
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         val view=LayoutInflater.from(context).inflate(R.layout.person_item,parent,false)
         val contact = getItem(position) // Access the Contact object from the adapter
-        view.findViewById<TextView>(R.id.person_name).text = contact?.name
-        view.findViewById<TextView>(R.id.personnumber).text = contact?.phoneNo
-        view.findViewById<TextView>(R.id.personemail).text = contact?.emailId
-        view.findViewById<TextView>(R.id.personaddress).text = contact?.address
-        val button1: Button = view.findViewById(R.id.locationBtn)
+        view.findViewById<TextView>(R.id.textName1).text = contact?.name
+        view.findViewById<TextView>(R.id.text_no).text = contact?.phoneNo
+        view.findViewById<TextView>(R.id.textemail).text = contact?.emailId
+        view.findViewById<TextView>(R.id.textaddress).text = contact?.address
+        val button1: Button = view.findViewById(R.id.location)
 
         button1.setOnClickListener {
             // Start the MapsActivity when button1 is clicked
